@@ -1,7 +1,7 @@
 # page-generator
 
 
-## installation
+## Installation
 
 #### 1. create a virtual environment for python 3.8.
 
@@ -16,7 +16,7 @@
 
 
 
-## running the app
+## Running the app
 
 #### 1. To run the application, make sure you're in the root directory *page-generator*.
 
