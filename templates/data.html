@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Process Form</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet"-->
+    
+  </head>
+
+  <body>
+
+    <h1>Welcome to the form page!</h1>
+
+    <h2>Form 1</h2>
+
+    <form method="POST" action="/data">
+    {% if message != '' %}
+      <p>{{ message }}</p>
+    {% endif %}
+    <h3>Template Name: </h3><input type="text" name="template_name">
+      <h3>Background Colour: </h3><input type="text" name="background_colour" required="required">
+      <h3>Background Image: </h3><input type="text" name="background_image" required="required">
+      <h3>Height: </h3><input type="text" name="height" required="required">
+      <h3>Content Background Colour: </h3><input type="text" name="content_bg_clr" required="required">
+      <h3>Border Radius: </h3><input type="text" name="border_radius" required="required">
+      <h3>Content Body: </h3><input type="text" name="content_body" required="required">
+      <input type="submit" name="Submit">
+    </form>
+
+  </body>
+
+</html>

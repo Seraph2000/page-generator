@@ -1,0 +1,91 @@
+<! DOCTYPE html>
+<html>
+
+    <head>
+        <title>Page Builder</title>
+        <!--link href="{{ url_for('static', filename='css/styling.css') }}" rel="stylesheet"-->
+        <style>
+
+            body {
+                height: 800px;
+                widrh: 1000px;
+            }
+
+            #form-a {
+                position: relative;
+                float: center;
+                height: 400px;
+                width: 1000px;
+                align: center;
+                padding: 40px;
+                top: 10px;
+                bottom: 100px;
+            }
+        
+            #container {
+                position: relative;
+                background-color: {{ result.background_colour }};
+                padding: 40px;
+                height: 1200px;
+                width: 1000px;
+                bottom: 100px;
+            }
+
+            #picture-box {
+                position: relative;
+                float: left;
+                background: {{ result.background_image }};
+                height: {{ result.height }};
+
+            }
+
+            #content {
+                position: relative;
+                float: left;
+                top: 40px;
+                padding: 20px;
+                height: 200px;
+                width: 400px;
+                background-color: {{ result.content_bg_clr }};
+                border: 2px solid red;
+                border-radius: {{ result.border_radius }};
+            }
+
+            .clear {
+                clear: both;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="form-a">
+            <h1>Template: {{ result.template_name }}</h1>
+            <div id="container">
+                <div>
+                    <h1>{{ result.template_name }}</h1>
+                    <h4>
+                        Template Name: {{ result.template_name }}<br>
+                        Background Colour: {{ result.background_colour }}<br>
+                        Background Image: {{ result.background_image }}<br>
+                        Image Height: {{ result.height }}<br>
+                        Content Background Colour: {{ result.content_bg_clr }}<br>
+                        Border Radius: {{ result.border_radius }}<br>
+                        Content: {{ result.content_body }}<br>
+                    </h4>
+                    <img id="picture-box" src="static/images/{{ result.background_image }}">
+                </div>
+                <div class="clear"></div>
+                <div id="content">
+                    <h3>{{ result.content_body }}</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="form-b">
+        </div>
+
+    </body>
+
+
+</html>

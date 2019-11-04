@@ -1,0 +1,15 @@
+#container {
+    position: static;
+    background-color: yellow;
+    height: 500px;
+    width: 1000px;
+}
+
+#picture-box {
+
+}
+
+#content {
+    height: 200px;
+    width: 800px;
+}
